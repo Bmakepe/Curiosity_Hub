@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:backgroundTint="@color/grey_light"
+    android:padding="2dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    tools:ignore="UnusedAttribute"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="175dp"
+            android:layout_height="120dp"
+            android:id="@+id/background_pic"
+            android:src="@drawable/background_gradient"
+            android:alpha="0.3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geography"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:id="@+id/subject"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

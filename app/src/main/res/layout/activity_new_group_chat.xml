@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewGroupChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeToolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/identity_dark"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:padding="10dp"
+            android:id="@+id/newGroupBackBTN"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Group"
+            android:layout_toEndOf="@+id/newGroupBackBTN"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_toStartOf="@+id/switchLocker"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchLocker"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:layout_alignParentEnd="true">
+
+            <RadioGroup
+                android:checkedButton="@+id/privateGP"
+                android:id="@+id/groupPrivacyBTN"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/pink_out_line"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="1dp"
+                    android:id="@+id/privateGP"
+                    android:background="@drawable/toggle_widget_background"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:text="Private"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/publicGP"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="Public"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/changeToolbar"
+        android:id="@+id/line"
+        android:background="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:id="@+id/groupPicArea"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/groupIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/user_icon"
+                        app:civ_border_color="@color/identity_dark"
+                        app:civ_border_width="5dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_baseline_add_circle_outline_24"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/identity_dark"
+                        app:civ_circle_background_color="@color/identity_dark"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_below="@+id/groupPicArea"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group Subject/Topic"
+                        android:layout_margin="5dp"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Type Group Subject Here"
+                        android:id="@+id/groupSubject"
+                        android:background="@color/grey_light"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:layout_margin="5dp"
+                        android:inputType="text"
+                        android:lines="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Provide a group subject and optional group icon"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/addGroupBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:backgroundTint="@color/identity_dark"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:padding="3dp"
+                android:text="Create group"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="17sp"
+                android:visibility="visible"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

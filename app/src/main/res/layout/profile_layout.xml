@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ch_logo"
+            android:layout_centerInParent="true"
+            android:alpha=".1"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/detailsArea">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha=".5"
+                        android:src="@drawable/background_gradient" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/proToolbar">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/profileBackBTN"
+                            android:src="@drawable/ic_baseline_arrow_back_24"
+                            android:padding="5dp"
+                            android:layout_alignParentStart="true"
+                            android:visibility="visible"
+                            android:layout_margin="5dp"
+                            app:tint="@color/black" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="Post Notifications"
+                            android:padding="5dp"
+                            android:id="@+id/postSwitch"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            app:thumbTextPadding="5dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/proToolbar"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/vpPicArea">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/person_img"
+                            android:id="@+id/school_Image"
+                            android:layout_alignParentStart="true"
+                            app:civ_border_width="3dp"
+                            app:civ_border_color="@color/identity_dark"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/PnameArea"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/school_Image">
+
+                            <TextView
+                                android:layout_gravity="center_horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_alignParentStart="true"
+                                android:textAlignment="center"
+                                android:maxLines="2"
+                                android:textColor="@color/black"
+                                android:id="@+id/schoolName"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/transparent_circle_with_border"
+                                android:id="@+id/btnFollow"
+                                android:layout_below="@+id/schoolName"
+                                android:padding="5dp"
+                                android:visibility="visible"
+                                android:layout_alignParentStart="true"
+                                android:backgroundTint="@color/identity_dark"
+                                tools:targetApi="lollipop">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/followUserBTN"
+                                    android:src="@drawable/ic_baseline_person_add_24"
+                                    app:tint="@color/identity_dark"
+                                    android:layout_centerVertical="true"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/followTV"
+                                    android:text="Follow"
+                                    android:layout_margin="5dp"
+                                    android:layout_toEndOf="@+id/followUserBTN"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/transparent_circle_with_border"
+                                android:id="@+id/btnNotification"
+                                android:layout_below="@+id/schoolName"
+                                android:layout_toEndOf="@+id/btnFollow"
+                                android:padding="2dp"
+                                android:layout_marginStart="5dp"
+                                android:visibility="gone"
+                                android:layout_centerVertical="true"
+                                android:backgroundTint="@color/identity_dark"
+                                tools:targetApi="lollipop">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/postNotificationBTN"
+                                    android:layout_margin="5dp"
+                                    android:src="@drawable/ic_baseline_notifications_off_24"
+                                    android:layout_centerVertical="true"
+                                    app:tint="@color/identity_dark"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="5"
+                        android:textAlignment="center"
+                        android:padding="5dp"
+                        android:layout_below="@+id/vpPicArea"
+                        android:textColor="@color/black"
+                        android:id="@+id/schoolDescription"
+                        android:textStyle="normal"
+                        android:textSize="14sp"/>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="270dp"
+                    app:cardElevation="1dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:id="@+id/posts"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Posts"
+                                android:textStyle="bold"
+                                android:textColor="@color/identity_dark"
+                                android:textSize="16sp"
+                                android:textAllCaps="true"  />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:id="@+id/hisPostsCounter"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:layout_toEndOf="@+id/posts"
+                            android:id="@+id/followers"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Followers"
+                                android:textColor="@color/identity_dark"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textAllCaps="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/followersNo"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:id="@+id/following"
+                            android:layout_toEndOf="@+id/followers"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Following"
+                                android:textSize="16sp"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/identity_dark"  />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/followingNo"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mediaHeading"
+                android:layout_below="@+id/detailsArea">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:id="@+id/hisMediaNo"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="See More"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/viewHisMedia"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mediaHeading" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hisMedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                android:nestedScrollingEnabled="false"
+                tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="-10dp"
+        android:src="@drawable/ic_baseline_chat_24"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:tint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/messageFAB"
+        android:visibility="gone"/>
+
+</RelativeLayout>

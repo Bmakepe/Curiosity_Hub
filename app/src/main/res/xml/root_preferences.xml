@@ -1,0 +1,87 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Account Settings">
+
+        <Preference
+            app:key="profile"
+            app:title="Edit Profile"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.makepe.curiosityhubls"
+                android:targetClass="com.makepe.curiosityhubls.EditProfileActivity"/>
+
+        </Preference>
+
+        <Preference
+            app:key="number"
+            app:title="Change My Number"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.makepe.curiosityhubls"
+                android:targetClass="com.makepe.curiosityhubls.ChangeNumberActivity"/>
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Privacy, Security and Safety">
+
+        <Preference
+            app:key="data_storage"
+            app:title="Data and Storage"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+        <Preference
+            app:key="terms"
+            app:title="Terms of Service"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+        <Preference
+            app:key="privacy_policy"
+            app:title="Privacy Policy"
+            app:useSimpleSummaryProvider="true">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.makepe.curiosityhubls"
+                android:targetClass="com.makepe.curiosityhubls.Privacy.PrivacyPolicyActivity"/>
+
+        </Preference>
+
+        <Preference
+            app:key="cookie_policy"
+            app:title="Cookie Policy"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+        <Preference
+            app:key="legal_notices"
+            app:title="Legal Notices"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Help">
+
+        <Preference
+            app:key="help"
+            app:title="Help Centre"
+            app:useSimpleSummaryProvider="true">
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

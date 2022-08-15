@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostDetailsActivity"
+    android:background="@color/feather_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_bar"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:id="@+id/backToMaterial"
+            android:padding="10dp"
+            app:tint="@color/identity_dark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Material Details"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:textColor="@color/identity_dark"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/documentDetails">
+
+                <TextView
+                    android:id="@+id/post_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal|bold"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="17sp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="end">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mdMaterialType"
+                        android:padding="5dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentStart="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mdMaterialType"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:id="@+id/mdMaterialYear"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mdMaterialYear"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:textSize="12sp"
+                        android:id="@+id/mdMaterialSubject"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mdMaterialSubject"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:textSize="12sp"
+                        android:id="@+id/mdMaterialGrade"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/grey_dark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/mdLikeBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_baseline_favorite_border_24"
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
+                    app:tint="@color/identity_dark"/>
+
+                <TextView
+                    android:id="@+id/mdLikeCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/mdLikeBTN"
+                    android:layout_marginStart="2dp"/>
+
+                <ImageView
+                    android:id="@+id/mdCommentBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/mdLikeCounter"
+                    android:src="@drawable/comment_outline_24"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    app:tint="@color/identity_dark" />
+
+                <TextView
+                    android:id="@+id/mdCommentsNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_toStartOf="@+id/comViewsCounter"
+                    android:layout_toEndOf="@+id/mdCommentBTN"
+                    android:layout_marginStart="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comViewsCounter"
+                    android:singleLine="true"
+                    android:textSize="10sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_toStartOf="@+id/mdSavePost"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/mdSavePost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/mdShareBTN"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_bookmark_border_24"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/identity_dark" />
+
+                <ImageView
+                    android:id="@+id/mdShareBTN"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    app:tint="@color/identity_dark"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/grey_dark" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/md_recycler_comments"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom"
+        android:background="@color/white"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/md_commenter_image"
+            app:civ_border_color="@color/identity_dark"
+            app:civ_border_width="1dp"
+            app:tint="@color/identity_dark"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/md_commenter_image"
+            android:layout_centerVertical="true"
+            android:id="@+id/md_add_comment"
+            android:hint="Write a review..."
+            android:inputType="textMultiLine"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="4"
+            android:background="@color/Transparent"
+            android:layout_toStartOf="@+id/md_post_comment"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/md_post_comment"
+            android:text="POST"
+            android:textStyle="bold"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/identity_dark"/>
+    </RelativeLayout>
+
+</RelativeLayout>

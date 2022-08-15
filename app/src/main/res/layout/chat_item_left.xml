@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/chatProPic"
+        android:src="@drawable/person_img"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:civ_border_overlay="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/chatProPic"
+        android:id="@+id/textArea">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageArea">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bokang Makepe"
+                android:id="@+id/chatUsername"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:background="@drawable/chat_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showMessages"
+                android:text="this is koetsa"
+                android:maxWidth="240dp"
+                android:layout_below="@+id/chatUsername"
+                android:visibility="visible"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:paddingStart="20dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/imageCard"
+            app:cardElevation="1dp"
+            android:visibility="gone"
+            app:cardUseCompatPadding="true"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/chatImage"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="start"
+            android:textStyle="italic"
+            android:id="@+id/chatTimeStamp"
+            android:layout_marginStart="12dp"
+            android:text="5 minutes ago"
+            android:layout_below="@+id/messageArea"
+            android:textColor="@color/black"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_baseline_done_24"
+        android:layout_toEndOf="@+id/textArea"
+        android:layout_centerVertical="true"
+        android:id="@+id/greyTick"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        app:tint="@color/identity_dark" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_tab"
+        app:actionViewClass="android.widget.TextView"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/nav_material"
+        android:icon="@drawable/material_tab"
+        app:actionViewClass="android.widget.TextView"
+        android:title="@string/materials"/>
+
+    <item
+        android:id="@+id/nav_new_post"
+        android:icon="@drawable/add_sign"
+        app:actionViewClass="android.widget.TextView"
+        android:title="New Post"/>
+
+    <item
+        android:id="@+id/nav_notification"
+        app:actionViewClass="android.widget.TextView"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="@string/notifications"/>
+
+    <item
+        android:id="@+id/nav_messages"
+        app:actionViewClass="android.widget.TextView"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Messages"/>
+
+</menu>

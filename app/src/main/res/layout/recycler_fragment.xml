@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MaterialFragments.LGCSE_Fragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormD_Recycler"
+        android:layout_above="@+id/classTabs"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormE_Recycler"
+        android:visibility="gone"
+        android:layout_above="@+id/classTabs"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormC_Recycler"
+        android:layout_above="@+id/classTabs"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormB_Recycler"
+        android:visibility="gone"
+        android:layout_above="@+id/classTabs"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormA_Recycler"
+        android:layout_above="@+id/classTabs"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FormG_Recycler"
+        android:visibility="gone"
+        android:layout_above="@+id/classTabs"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/subjectRecycler"
+        android:layout_above="@+id/classTabs"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/classTabs"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LGCSE_classes"
+            android:layout_gravity="bottom"
+            app:tabPadding="5dp"
+            app:tabIndicatorGravity="top"
+            app:tabGravity="fill"
+            android:visibility="gone"
+            app:tabBackground="@color/white"
+            app:tabSelectedTextColor="@color/identity_dark"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="ifContentScrolls"
+            app:tabMode="fixed"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form D"
+                android:id="@+id/formD"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form E"
+                android:id="@+id/formE"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/JC_Classes"
+            android:layout_gravity="bottom"
+            app:tabPadding="5dp"
+            app:tabIndicatorGravity="top"
+            app:tabGravity="fill"
+            android:visibility="gone"
+            app:tabSelectedTextColor="@color/identity_dark"
+            app:tabBackground="@color/white"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="ifContentScrolls"
+            app:tabMode="fixed"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form A"
+                android:id="@+id/formA"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form B"
+                android:id="@+id/formB"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form C"
+                android:id="@+id/formC"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PSLE_Classes"
+            android:layout_gravity="bottom"
+            app:tabSelectedTextColor="@color/identity_dark"
+            app:tabPadding="5dp"
+            app:tabIndicatorGravity="top"
+            app:tabGravity="fill"
+            android:visibility="gone"
+            app:tabBackground="@color/white"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="ifContentScrolls"
+            app:tabMode="scrollable"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 1"
+                android:id="@+id/class1"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 2"
+                android:id="@+id/class2"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 3"
+                android:id="@+id/class3"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 4"
+                android:id="@+id/class4"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 5"
+                android:id="@+id/class5"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 6"
+                android:id="@+id/class6"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class 7"
+                android:id="@+id/class7"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

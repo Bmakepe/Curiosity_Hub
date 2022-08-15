@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/identity_dark"
+    tools:context=".ProfileBuildActivity"
+    android:padding="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/previous_icon"
+            android:padding="10dp"
+            android:onClick="callPreviousSignUpScreen"
+            android:id="@+id/previous_screen"
+            app:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/profile_title"
+            android:layout_below="@id/previous_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Academic Backgrond"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/muli_black"
+            android:transitionName="transition_title_text"/>
+
+        <LinearLayout
+            android:id="@+id/input_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_title"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/std_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="School Name"
+                app:startIconDrawable="@drawable/message_icon"
+                app:startIconTint="@color/white"
+                app:hintTextColor="@color/grey_light"
+                android:textColorHint="@color/grey_light"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/white"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/grade_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Class"
+                app:startIconDrawable="@drawable/message_icon"
+                android:layout_marginTop="20dp"
+                app:startIconTint="@color/white"
+                app:hintTextColor="@color/grey_light"
+                android:textColorHint="@color/grey_light"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/white"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"/>
+
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Whats Your District"
+                android:id="@+id/DistrictTV"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:id="@+id/districtSpinner"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_margin="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_bg"
+                android:dropDownWidth="300dp"
+                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                android:paddingRight="14dp"
+                android:popupBackground="@android:color/white"
+                android:popupElevation="3dp"
+                android:stateListAnimator="@drawable/spinner_sla"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:entries="@array/Districts"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Grade Level"
+                android:id="@+id/gradeTV"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:textSize="16sp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:id="@+id/gradeSpinner"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_margin="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_bg"
+                android:dropDownWidth="300dp"
+                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                android:paddingRight="14dp"
+                android:popupBackground="@android:color/white"
+                android:popupElevation="3dp"
+                android:stateListAnimator="@drawable/spinner_sla"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:entries="@array/Class_items"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/skip_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_no_fill"
+                android:padding="3dp"
+                android:text="Skip"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:transitionName="transition_btn_skip"/>
+
+            <Button
+                android:id="@+id/finish_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:padding="3dp"
+                android:layout_alignParentEnd="true"
+                android:text="Finish"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/identity"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:transitionName="transition_btn_next"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

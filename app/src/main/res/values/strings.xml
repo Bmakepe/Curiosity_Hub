@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Curiosity Hub</string>
+    <string name="developer">Developed by : KOETSA</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="terms_and_conditions">I Hereby Accept All The Terms and Conditions</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="re_enter_number">Re-enter Number</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="sms_data_rates">By clicking Sign Up, an sms may or will be sent to you. Standard SMS and Data rates may apply. Please check with your local service provider</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="discussions">Discussions</string>
+    <string name="schools">Schools</string>
+    <string name="notifications">Notifications</string>
+    <string name="materials">Materials</string>
+    <string name="share_notes">Share_notes</string>
+    <string name="next_slide">Next_slide</string>
+    <string name="next">next</string>
+    <string name="build_profile">create profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="sub_heading">We are automatically detecting a SMS send to your mobile number </string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="recording_audio">recording audio</string>
+    <string name="admob_id">ca-app-pub-2193593343976198~1171740936</string>
+    <string name="reply_label">Reply</string>
+
+    <string-array name="Class_items">
+
+        <item>-----Select Grade Level-----</item>
+        <item>ECCD</item>
+        <item>Class 1</item>
+        <item>Class 2</item>
+        <item>Class 3</item>
+        <item>Class 4</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+        <item>Form A</item>
+        <item>Form B</item>
+        <item>Form C</item>
+        <item>Form D</item>
+        <item>Form E</item>
+        <item>For Parents</item>
+        <item>For Teachers</item>
+        <item>Not Applicable</item>
+
+    </string-array>
+
+    <string-array name="Districts">
+
+        <item>-----Select District-----</item>
+        <item>Berea</item>
+        <item>Butha-Buthe</item>
+        <item>Leribe</item>
+        <item>Mafeteng</item>
+        <item>Maseru</item>
+        <item>Mohales Hoek</item>
+        <item>Mokhotlong</item>
+        <item>Thaba Teska</item>
+        <item>Qachas Nek</item>
+        <item>Quthing</item>
+
+    </string-array>
+
+    <string-array name="Roles">
+
+        <item>-----Select Your Role-----</item>
+        <item>Student</item>
+        <item>Teacher</item>
+        <item>Parent</item>
+        <item>Ministry of Education and Training Staff</item>
+        <item>Other</item>
+
+    </string-array>
+
+</resources>

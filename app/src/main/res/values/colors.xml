@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="grey_dark">#757687</color>
+    <color name="grey_light">#A6A8CD</color>
+    <color name="feather_light">#F1F1FB</color>
+    <color name="maroon_light">#6B1423</color>
+    <color name="identity">#11cabb</color>
+    <color name="identity_dark">#0E8C82</color>
+    <color name="identity_bar">#0B736B</color>
+    <color name="maroon">#390000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Transparent">#00FFFFFF</color>
+
+</resources>

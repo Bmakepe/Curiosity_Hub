@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_margin="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/grey_dark"
+    android:padding="5dp"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentArea">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/person_img"
+            android:id="@+id/comProPic"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/grey_dark"/>
+
+        <RelativeLayout
+            android:id="@+id/commentDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/replyComment"
+            android:layout_toEndOf="@+id/comProPic" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/nameHeading"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/commentOwner"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:paddingStart="5dp"
+                    android:layout_toStartOf="@+id/commentTime"
+                    android:layout_alignParentStart="true"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentTime"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:gravity="end"/>
+
+            </RelativeLayout>
+
+            <com.skyhope.showmoretextview.ShowMoreTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentCaption"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:layout_below="@+id/nameHeading"
+                android:layout_centerVertical="true"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_reply_24"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:id="@+id/replyComment"/>
+
+        <View
+            android:layout_below="@id/commentDetails"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/grey_dark" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentArea"
+        android:visibility="gone">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reply Comment"
+            android:textColorHint="@color/black"
+            android:id="@+id/replyCommentET"
+            android:layout_toStartOf="@+id/sendReply"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:id="@+id/sendReply"
+            android:background="@null"
+            android:tint="@color/black"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

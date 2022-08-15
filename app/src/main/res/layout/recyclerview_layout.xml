@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ch_logo"
+        android:layout_centerInParent="true"
+        android:alpha=".1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogToolbar">
+
+        <RelativeLayout
+            android:id="@+id/dialogSearchHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:padding="5dp"
+                android:id="@+id/dialogSearchBackBTN"
+                android:layout_alignParentStart="true"
+                app:tint="@color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialogSearchEd"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="Search"
+                android:layout_toEndOf="@+id/dialogSearchBackBTN"
+                android:layout_marginStart="5dp"
+                android:layout_toStartOf="@+id/cancelSearch"
+                android:layout_marginEnd="5dp"
+                android:padding="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cancelSearch"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:padding="5dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/savedToolbar"
+            android:padding="4dp"
+            android:background="@color/identity_dark"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/savedBackBTN"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/savedBackBTN"
+                android:layout_toStartOf="@+id/savedSearchBTN"
+                android:text="Saved Material"
+                android:layout_centerVertical="true"
+                android:id="@+id/dialogHeader"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search_24"
+                android:id="@+id/savedSearchBTN"
+                android:padding="10dp"
+                android:visibility="visible"
+                app:tint="@color/white"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/savedSearchBTN"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_done_24"
+                android:id="@+id/doneBTN"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:tint="@color/white"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/grey_dark"
+        android:layout_below="@+id/dialogToolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dialogToolbar"
+        android:id="@+id/savedRecycler"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/recyclerLoader"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

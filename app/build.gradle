@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 30
+
+
+    defaultConfig {
+        applicationId "com.makepe.curiosityhubls"
+        minSdkVersion 20
+        targetSdkVersion 32
+        versionCode 5
+        versionName "1"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug{
+            debuggable false
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.7'
+    implementation 'com.google.firebase:firebase-firestore:24.2.2'
+    implementation 'com.google.firebase:firebase-auth:21.0.7'
+
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+    implementation 'com.hbb20:ccp:2.5.4'
+    implementation 'com.google.firebase:firebase-auth:21.0.7'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference:1.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.chaos.view:pinview:1.4.4'
+    implementation "com.jakewharton:butterknife:10.1.0"
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.mahimrocky:ShowMoreText:1.0.2'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+
+    implementation 'com.github.JagarYousef:ChatVoicePlayer:1.0.7'
+    implementation 'com.github.shts:StoriesProgressView:3.0.0'
+
+    implementation 'com.google.android.gms:play-services-ads:21.1.0'
+    implementation 'com.google.firebase:firebase-ads:21.1.0'
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:ignore="RtlSymmetry"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:id="@+id/nameLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/contactProPic"
+            android:src="@drawable/person_img"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="1dp"
+            app:civ_border_overlay="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/contactProPic"
+            android:layout_centerVertical="true"
+            android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contactName"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/statusTV"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statusTV"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/senderName"
+                    android:textStyle="italic"
+                    android:layout_below="@+id/contactName"
+                    android:layout_alignParentStart="true"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@+id/timeStamp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personalNumber"
+                    android:textStyle="italic"
+                    android:layout_toEndOf="@+id/senderName"
+                    android:layout_below="@+id/contactName"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_toStartOf="@+id/timeStamp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timeStamp"
+                    android:textStyle="italic"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/contactName"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:id="@+id/invitationBTN"
+            android:padding="10dp"
+            android:background="@drawable/button_selector"
+            android:backgroundTint="@color/grey_dark"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeNumberActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ch_logo"
+        android:layout_centerInParent="true"
+        android:alpha=".1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeToolbar"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:padding="10dp"
+            android:id="@+id/editNumberBackBTN"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_done_24"
+            android:padding="10dp"
+            android:id="@+id/editNumDoneBTN"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Phone Number"
+            android:layout_toEndOf="@+id/editNumberBackBTN"
+            android:layout_toStartOf="@+id/editNumDoneBTN"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:id="@+id/currentNumberArea"
+        android:layout_below="@+id/changeToolbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Confirm Your Active Number Below"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentNumber"
+            android:background="@drawable/button_selector"
+            android:backgroundTint="@color/grey_light">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/oldNumberCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_contentColor="@color/maroon"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="15sp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/oldNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:layout_toEndOf="@+id/oldNumberCode"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_dark"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/currentNumberArea"
+        android:background="@color/black" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/newNumberArea"
+        android:background="@color/black" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/currentNumberArea"
+        android:background="@color/black" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/verificationArea"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:id="@+id/newNumberArea"
+        android:layout_below="@+id/currentNumberArea">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Enter The New Number Below"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newNumber"
+            android:background="@drawable/button_selector"
+            android:backgroundTint="@color/grey_light">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/new_code_Picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                app:ccp_textSize="15sp"
+                app:ccp_contentColor="@color/maroon"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="false"
+                android:layout_centerVertical="true"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/new_phone_Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:layout_toEndOf="@+id/new_code_Picker"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_dark"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/verificationArea"
+        android:layout_below="@+id/newNumberArea"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter 6 digit code"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"/>
+
+        <com.chaos.view.PinView
+            android:id="@+id/otp_edtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:viewType="rectangle"
+            app:itemCount="6"
+            app:itemRadius="5dp"
+            android:inputType="number"
+            app:itemHeight="50dp"
+            android:itemBackground="@color/white"
+            app:itemWidth="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:lineColor="@color/black"
+            style="@style/PinWidget.PinView"
+            android:cursorVisible="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/change_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/re_enter_number"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/resendOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_code"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/verificationArea"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/verifyOTPBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:backgroundTint="@color/identity_dark"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:padding="3dp"
+            android:text="Verify"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="17sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
